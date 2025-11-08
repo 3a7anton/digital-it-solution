@@ -1,73 +1,127 @@
-# React + TypeScript + Vite
+# Digital IT Solutions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive website for Digital IT Solutions - a company providing comprehensive IT services including branding, motion graphics, web development, animation, video production, photography, and software development.
 
-Currently, two official plugins are available:
+**Live Demo:** [digitalitsolbd.netlify.app](https://digitalitsolbd.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## React Compiler
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Development](#development)
+  - [Build](#build)
+- [Project Structure](#project-structure)
+- [Available Scripts](#available-scripts)
+- [Deployment](#deployment)
+- [License](#license)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Features
 
-## Expanding the ESLint configuration
+- **Modern UI/UX Design** - Sleek dark theme with gradient accents and animated backgrounds
+- **Responsive Layout** - Fully responsive design that works on all device sizes
+- **Animated Components** - Custom Aurora background animations and interactive elements
+- **Multi-page Application** - Home, About, Services, and Contact pages
+- **Interactive Elements** - Hover effects, transitions, and micro-interactions
+- **Performance Optimized** - Built with modern tools for fast loading times
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technologies Used
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- [React 19](https://react.dev/) - Frontend library for building user interfaces
+- [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript
+- [Vite](https://vitejs.dev/) - Next generation frontend tooling
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) - React fast refresh plugin
+- [GSAP](https://greensock.com/gsap/) - Professional-grade JavaScript animation library
+- [React Router](https://reactrouter.com/) - Declarative routing for React applications
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) - Styling and layout
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+- Node.js (version 16 or higher)
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/digital-it-solution-bd.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd digital-it-solution-bd
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development
+
+Start the development server:
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Create a production build:
+```bash
+npm run build
 ```
+
+Preview the production build locally:
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+digital-it-solution-bd/
+├── src/
+│   ├── components/
+│   │   ├── ui/              # Reusable UI components
+│   │   ├── AboutUs.tsx      # About page component
+│   │   ├── Contact.tsx      # Contact page component
+│   │   ├── Footer.tsx       # Footer component
+│   │   ├── HomePage.tsx     # Home page component
+│   │   ├── Navbar.tsx       # Navigation bar component
+│   │   └── Services.tsx     # Services page component
+│   ├── App.tsx              # Main application component
+│   ├── main.tsx             # Entry point
+│   └── ...
+├── public/                  # Static assets
+├── index.html               # HTML template
+├── package.json             # Project dependencies and scripts
+├── tsconfig.json            # TypeScript configuration
+├── vite.config.ts           # Vite configuration
+└── ...
+```
+
+## Available Scripts
+
+- `npm run dev` - Starts the development server
+- `npm run build` - Builds the app for production
+- `npm run preview` - Locally previews the production build
+- `npm run lint` - Runs ESLint to analyze the code
+
+## Deployment
+
+This project is configured for easy deployment to Netlify:
+
+1. Push your code to a GitHub repository
+2. Connect your repository to Netlify
+3. Set the build command to `npm run build`
+4. Set the publish directory to `dist`
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

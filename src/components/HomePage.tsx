@@ -1,9 +1,44 @@
 import React from 'react';
 import Aurora from './ui/Aurora';
+import LogoLoop from './LogoLoop';
 
 const HomePage: React.FC = () => {
+  // Dummy partner logos data
+  const partnerLogos = [
+    {
+      src: "https://placehold.co/150x80/333333/FFFFFF?text=Partner+1",
+      alt: "Partner 1",
+      title: "Partner 1"
+    },
+    {
+      src: "https://placehold.co/150x80/333333/FFFFFF?text=Partner+2",
+      alt: "Partner 2",
+      title: "Partner 2"
+    },
+    {
+      src: "https://placehold.co/150x80/333333/FFFFFF?text=Partner+3",
+      alt: "Partner 3",
+      title: "Partner 3"
+    },
+    {
+      src: "https://placehold.co/150x80/333333/FFFFFF?text=Partner+4",
+      alt: "Partner 4",
+      title: "Partner 4"
+    },
+    {
+      src: "https://placehold.co/150x80/333333/FFFFFF?text=Partner+5",
+      alt: "Partner 5",
+      title: "Partner 5"
+    },
+    {
+      src: "https://placehold.co/150x80/333333/FFFFFF?text=Partner+6",
+      alt: "Partner 6",
+      title: "Partner 6"
+    }
+  ];
+
   return (
-   <div style={{ 
+    <div style={{ 
       color: 'white',
       position: 'relative',
       minHeight: '100vh',
@@ -49,7 +84,8 @@ const HomePage: React.FC = () => {
 
       {/* Partners Section */}
       <section style={{ 
-        marginBottom: '3rem' 
+        marginBottom: '3rem',
+        padding: '0 2rem'
       }}>
         <h2 style={{  
           textAlign: 'center', 
@@ -58,34 +94,21 @@ const HomePage: React.FC = () => {
         }}>
           Our Partners
         </h2>
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          gap: '2rem',
-          flexWrap: 'wrap'
-        }}>
-          {/* Empty partner slots - to be filled later */}
-          {[1, 2, 3, 4].map((item) => (
-            <div 
-              key={item} 
-              style={{ 
-                width: '150px', 
-                height: '100px', 
-                backgroundColor: '#333',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                borderRadius: '8px'
-              }}
-            >
-              <span>Partner {item}</span>
-            </div>
-          ))}
-        </div>
+        <LogoLoop 
+          logos={partnerLogos}
+          speed={80}
+          logoHeight={80}
+          gap={48}
+          fadeOut={true}
+          scaleOnHover={true}
+          ariaLabel="Our technology partners"
+        />
       </section>
 
       {/* Testimonials Section */}
-      <section>
+      <section style={{ 
+        padding: '5rem'
+      }}>
         <h2 style={{ 
           textAlign: 'center', 
           marginBottom: '2rem',
