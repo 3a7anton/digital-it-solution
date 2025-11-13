@@ -288,6 +288,7 @@ const Services: React.FC = () => {
               e.currentTarget.style.transform = 'translateY(0)';
               e.currentTarget.style.boxShadow = '0 4px 20px rgba(132, 0, 255, 0.3)';
             }}
+            onClick={() => window.open('https://wa.me/8801771778880', '_blank')}
           >
             Get Started
           </button>

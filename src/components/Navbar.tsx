@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
   return (
     <PillNav 
       logo={reactLogo}
-      logoAlt="Digital IT Solutions Logo"
+      logoAlt="RTech Lead Logo"
       items={navItems}
       baseColor="#000"
       pillColor="#fff"

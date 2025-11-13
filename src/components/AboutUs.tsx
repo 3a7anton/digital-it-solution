@@ -107,7 +107,7 @@ const AboutUs: React.FC = () => {
               marginBottom: '1.5rem',
               opacity: 0.95
             }}>
-              Founded in 2024, Digital IT Solutions has quickly established itself as a leading provider 
+              Founded in 2024, RTech Lead has quickly established itself as a leading provider 
               of innovative IT services. With a team of dedicated professionals and a passion for technology, 
               we've successfully completed over 50 projects for clients across various industries.
             </p>

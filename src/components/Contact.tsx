@@ -22,8 +22,8 @@ const Contact: React.FC = () => {
           <p>Have questions about our services? Reach out to us and we'll get back to you as soon as possible.</p>
           
           <div style={{ marginTop: '1rem' }}>
-            <p><strong>Email:</strong> info@digitalitsolutionbd.com</p>
-            <p><strong>Phone:</strong> +880 1234 567890</p>
+            <p><strong>Email:</strong> 3a7anton@gmail.com</p>
+            <p><strong>Phone:</strong> +8801771778880</p>
             <p><strong>Address:</strong> 123 Tech Street, Dhaka, Bangladesh</p>
           </div>
         </div>
